@@ -15,11 +15,42 @@
 
     <body>
     <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
+     <!-- This is the index page of your Django app! -->
     <!--Add a nav bar here -->
+    {%include 'djangoapp/navbar.html'%}
+    <div class="container">
+        {% block content %}
 
+
+
+        {% endblock content %}
+    </div>
     <!--Add a dealer table here -->
-
+    <style>
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          padding:10px;
+          width: 100%;
+          background-color: grey;
+          color: white;
+          text-align: center;
+        }
+        </style>
+        
+        <div class="footer">
+          
+                    <a class="btn btn-sm-info" href="{% url 'djangoapp:contact'%}">Contact Us</a>
+                 
+                 
+                    <a class="btn btn-sm-info" href="{% url 'djangoapp:about'%}">About Us</a>
+                 
+                 
+                <!-- </ul> -->
+              <!-- </div> -->
+        </div>
+        
     </body>
 
 </html>
