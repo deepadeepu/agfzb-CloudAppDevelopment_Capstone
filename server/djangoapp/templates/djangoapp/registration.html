@@ -1,31 +1,47 @@
-{%extends 'djangoapp/index.html'%}
+{%extends 'main.html'%}
  {% load static %}
  
 
 {% block content %}
- 
-
-<form method="POST" action ="">
+ <style>
+     .container{
+        
+          padding:10px;
+          width: 100%;
+          background-color: grey;
+          color: white;
+          text-align: center;
+          content:center;
+          bottom:10px;
+     }
+     .form-register{
+         display:inline-block;
+     }
+     </style>
+     <hr>
+<div class="container">
+<p ><h2> Register</h2> </p>
+<form method="POST" action ="" class="form-register">
     {%csrf_token%}
     <div class="col">
        
-        <div class="col-md-4 mb-3">
+        <div class="col-md mb-3">
             <label >Username</label>
            
               <input type="text" class="form-control"  placeholder="Username" required>
                         
           </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md mb-3">
         <label >First name</label>
         <input type="text" class="form-control"  placeholder="First name"  required>
        
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md mb-3">
         <label>Last name</label>
         <input type="text" class="form-control "  placeholder="Last name"  required>
         
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md mb-3">
         <label>Password</label>
         <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
   
@@ -37,6 +53,6 @@
     </div>
 
   </form>
-
+</div>
 
  {%endblock%}
