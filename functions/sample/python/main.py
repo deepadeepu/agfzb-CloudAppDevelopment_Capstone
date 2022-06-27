@@ -13,7 +13,7 @@ import requests
 
 
 def main(dict):
-    databaseName = "dealerships"
+    databaseName = "dealerships","reviews"
 
     try:
         client = Cloudant.iam(
